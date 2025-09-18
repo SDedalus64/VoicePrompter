@@ -1,0 +1,27 @@
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+
+# React Native
+ios/Pods/
+ios/build/
+android/.gradle/
+android/app/build/
+*.keystore
+
+# VSCode
+.vscode/
+.history/
+
+# macOS
+.DS_Store
+
+# Xcode
+xcuserdata/
+DerivedData/
+
+# Env / secrets
+.env

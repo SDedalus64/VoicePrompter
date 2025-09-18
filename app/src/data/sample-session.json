@@ -1,0 +1,90 @@
+{
+  "id": "demo-001",
+  "title": "Selling a Service via Water-Bottle Analogy",
+  "policy": {
+    "interruptMode": "tone_only",
+    "maxRambleSecs": 70,
+    "fallbackCueText": "Time to segue.",
+    "preRollToneMs": 250,
+    "asrEnabled": false,
+    "ttsVoiceId": "en-US-JennyNeural"
+  },
+  "segments": [
+    {
+      "id": "seg-intro",
+      "title": "Challenge: No Tangible Product \u2192 Sell Trust",
+      "keyPoints": [
+        "Service = confidence in the person + the system behind them",
+        "Trust > features; proof via process"
+      ],
+      "promptType": "line",
+      "promptText": "Start with the core problem: selling a service means selling trust.",
+      "targetSecs": 40,
+      "toleranceSecs": 15,
+      "minGapMs": 400,
+      "cueStyle": "tone_then_tts",
+      "priority": 1
+    },
+    {
+      "id": "seg-glass",
+      "title": "Glass (CIF/basic forwarder)",
+      "keyPoints": [
+        "Does the job",
+        "No temp control",
+        "No spill guard"
+      ],
+      "promptType": "topic",
+      "targetSecs": 45,
+      "toleranceSecs": 15,
+      "minGapMs": 400,
+      "cueStyle": "tone_then_tts",
+      "priority": 2
+    },
+    {
+      "id": "seg-bottle",
+      "title": "Standard Bottle (average NVOCC)",
+      "keyPoints": [
+        "Better portability",
+        "Some features",
+        "Still generic"
+      ],
+      "promptType": "topic",
+      "targetSecs": 45,
+      "toleranceSecs": 15,
+      "minGapMs": 400,
+      "cueStyle": "tone_then_tts",
+      "priority": 2
+    },
+    {
+      "id": "seg-owala",
+      "title": "Owala-level Design (Dedola)",
+      "keyPoints": [
+        "Precision + innovation",
+        "Straw-or-sip \u2192 adaptable workflows",
+        "Hot/cold \u2192 scenario readiness"
+      ],
+      "promptType": "line",
+      "promptText": "We\u2019re engineered like the bottle that anticipates your use\u2014not just holds liquid.",
+      "targetSecs": 50,
+      "toleranceSecs": 20,
+      "minGapMs": 400,
+      "cueStyle": "tone_then_tts",
+      "priority": 1
+    },
+    {
+      "id": "seg-wrap",
+      "title": "Wrap: Trust by Design",
+      "keyPoints": [
+        "Design for client needs",
+        "Precision delivered",
+        "High-tech + high-touch"
+      ],
+      "promptType": "topic",
+      "targetSecs": 30,
+      "toleranceSecs": 10,
+      "minGapMs": 400,
+      "cueStyle": "tone_then_tts",
+      "priority": 1
+    }
+  ]
+}
