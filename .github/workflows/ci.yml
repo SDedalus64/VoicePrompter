@@ -1,0 +1,35 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, dev ]
+  pull_request:
+    branches: [ main, dev ]
+
+jobs:
+  typecheck-and-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 18.x
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci || npm i
+
+      - name: TypeScript typecheck (if tsconfig exists)
+        if: hashFiles('tsconfig.json') != ''
+        run: npx tsc --noEmit
+
+      - name: ESLint (if config exists)
+        if: hashFiles('.eslintrc*') != ''
+        run: npx eslint . --ext .ts,.tsx || true
+
+      - name: Prettier check (if config exists)
+        if: hashFiles('.prettierrc*') != ''
+        run: npx prettier -c "**/*.{ts,tsx,js,jsx,json,md}" || true
